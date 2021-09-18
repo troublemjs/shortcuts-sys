@@ -14,7 +14,8 @@
       "@@/*": ["src/.umi/*"],
       "shortcuts-sys": ["src/index.tsx"]
     },
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": false
   },
   "exclude": [
     "node_modules",
