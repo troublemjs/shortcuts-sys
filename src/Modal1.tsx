@@ -63,6 +63,45 @@ interface Modal1Props {
   modalRender?: (node: React.ReactNode) => React.ReactNode;
   focusTriggerAfterClose?: boolean;
 }
+
+export interface ModalFuncProps {
+  prefixCls?: string;
+  classname?: string;
+  visible?: boolean;
+  title?: React.ReactNode;
+  closable?: boolean;
+  content?: React.ReactNode;
+  // TODO: 找到准确的类型
+  onOk?: (...args: any[]) => any;
+  onCancel?: (...args: any[]) => any;
+  afterClose?: () => void;
+  // okButtonProps?: ButtonProps;
+  // cancelButtonProps?: ButtonProps;
+  centered?: boolean;
+  width?: string | number;
+  okText?: React.ReactNode;
+  // okType?: LegacyButtonType;
+  cancelText?: React.ReactNode;
+  icon?: React.ReactNode;
+  mask?: boolean;
+  maskClosable?: boolean;
+  zIndex?: number;
+  okCancel?: boolean;
+  style?: React.CSSProperties;
+  maskStyle?: React.CSSProperties;
+  type?: 'info' | 'success' | 'error' | 'warn' | 'warning' | 'confirm';
+  keyboard?: boolean;
+  getContainer?: string | HTMLElement | GetContainerFunc | false;
+  autoFocusButton?: null | 'ok' | 'cancel';
+  transitionName?: string;
+  maskTransitionName?: string;
+  // direction?: DirectionType;
+  bodyStyle?: React.CSSProperties;
+  closeIcon?: React.ReactNode;
+  modalRender?: (node: React.ReactNode) => React.ReactNode;
+  focusTriggerAfterClose?: boolean;
+}
+
 const Modal1: React.FC<Modal1Props> = (props) => {
   const {} = props;
 
